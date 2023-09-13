@@ -2,6 +2,7 @@ import React from 'react';
 import './home.css';
 
 import Hero_img from './../../assets/hero_image.png';
+import Card from '../../components/catergory_card/card';
 
 export default function Home() {
   return (
@@ -22,7 +23,31 @@ export default function Home() {
                 
             </div>
         </div>
-        <div className='home-body-div-1'></div>
+        <div className='home-body-div-1'>
+            <p className='home-body-div-1-catergory'>Categories</p>
+            <div>
+                <p  className='home-Hygiene_products-header'>Hygiene products</p>
+                <div className='home-body-div-1-catergory-card-div-main'>
+                <div className='home-body-div-1-catergory-card-div'>
+                    <Card/>
+                    <Card/>
+                    <Card/>
+                    <Card/>
+                </div>
+                </div>
+                
+                <p className='home-food_products-header'>Food products</p>
+                <div className='home-body-div-1-catergory-card-div-main'>
+                <div className='home-body-div-1-catergory-card-div'>
+                    <Card/>
+                    <Card/>
+                    <Card/>
+                    <Card/>
+                </div>
+                </div>
+                <div></div>
+            </div>
+        </div>
     </div>
   )
 }
