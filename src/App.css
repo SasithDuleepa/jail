@@ -1,38 +1,38 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+:root{
+    --primary-50:rgb(255,255,255);
+    --primary-100:rgb(255,255,255);
+    --primary-200:rgb(255,255,255);
+    --primary-300:rgb(255,255,255);
+    --primary-400:rgb(255,255,255);
+    --primary-500:rgb(255,255,255);
+    --primary-600:rgb(255,255,255);
+    --primary-700:rgb(255,255,255);
+    --primary-800:rgb(255,255,255);
+    --primary-900:rgb(255,255,255);
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+    --black-50:rgb(232,232,233);
+    --black-100:rgb(185,185,186);
+    --black-200:rgb(151,151,152);
+    --black-300:rgb(104,104,105);
+    --black-400:rgb(74,74,76);
+    --black-500:rgb(29,29,31);
+    --black-600:rgb(26,26,28);
+    --black-700:rgb(21,21,22);
+    --black-800:rgb(16,16,17);
+    --black-900:rgb(12,12,12);
+ 
+    --red-50:rgb(251,237,237);
+    --red-100:rgb(242,199,198);
+    --red-200:rgb(136,171,171);
+    --red-300:rgb(227,133,132);
+    --red-400:rgb(221,109,109);
+    --red-500:rgb(213,73,72);
+    --red-600:rgb(194,66,66);
+    --red-700:rgb(151,52,51);
+    --red-800:rgb(117,40,40);
+    --red-900:rgb(89,31,30);
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }

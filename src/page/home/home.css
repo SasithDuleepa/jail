@@ -1,0 +1,38 @@
+.home-hero-div{
+    background-color: yellowgreen;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+
+}
+.home-body-div-1{
+    height: 100vh;
+    background-color: violet;
+}
+
+
+    
+    .home-hero-sub-div1 {
+         grid-area: 1 / 1 / 2 / 2; 
+         background-color: aqua;
+        }
+    .home-hero-sub-div2 {
+         grid-area: 1 / 2 / 2 / 3; 
+         background-color: blue;
+    }
+
+
+.home-hero-sub-img-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    
+}
+.home-hero-img{
+    width:560px;
+    height:538px ;
+}
