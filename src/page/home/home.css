@@ -8,10 +8,6 @@
     grid-row-gap: 0px;
 
 }
-.home-body-div-1{
-    height: 100vh;
-    background-color: violet;
-}
 
 
     
@@ -71,4 +67,43 @@
 .home-hero-img{
     width:560px;
     height:538px ;
+}
+
+
+
+
+
+
+
+
+
+.home-food_products-header{
+    font-size: 25px;
+    font-weight: 400;
+    margin-left: 110px;
+    margin-top: 80px;
+}
+.home-Hygiene_products-header{
+    font-size: 25px;
+    font-weight: 400;
+    margin-left: 100px;
+}
+.home-body-div-1{
+    height: 150vh;
+    
+}
+.home-body-div-1-catergory{
+    text-align: center;
+    font-size: 50px;
+    font-weight: 500;
+}
+
+.home-body-div-1-catergory-card-div-main{
+    display: flex;
+    justify-content: center;
+}
+.home-body-div-1-catergory-card-div{
+    display: flex;
+    width: 85%;
+    justify-content: space-between;
 }
