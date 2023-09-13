@@ -41,6 +41,7 @@
     background-color: var(--primary-500);
     border: 2px solid var(--primary-800);
     border-radius: 10px;
+    padding-left: 10px;
 }
 
 .label_password {
@@ -56,6 +57,7 @@
     background-color: var(--red-500);
     color: var(--primary-500);
     font-size: 20px;
+    cursor: pointer;
 }
 
 .other-logins {
