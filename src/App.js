@@ -6,6 +6,7 @@ import {Switch} from "react-router-dom";
 import Navbar from './components/navBar/navbar';
 
 import Home from './page/home/home';
+import User_Registration from './page/home/User_registration/User_registration';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Router>
         <Switch>
           <Route exact path="/" component={Home} />
+          <Route exact path="/user_registration" component={User_Registration} />
 
         </Switch>
       </Router>
