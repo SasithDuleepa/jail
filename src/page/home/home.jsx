@@ -8,10 +8,10 @@ export default function Home() {
     <div>
         <div className='home-hero-div'>
             <div  className='home-hero-sub-div1'>
-                <div>
-                  <p>Make them feel </p>
-                  <p>family is near</p>
-                  <button>shop now</button>
+                <div className='home-hero-sub-div-1-div'>
+                  <p className='home-hero-sub-div-1-p1'>Make them feel </p>
+                  <p className='home-hero-sub-div-1-p2'>Family is near</p>
+                  <button className='home-hero-sub-div-1-button'>shop now</button>
                 </div>
                 
             </div>
