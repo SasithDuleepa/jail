@@ -1,0 +1,87 @@
+.login-page {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    height: 100vh;
+}
+
+.login-page-left-container {
+    grid-area: 1 / 1 / 6 / 6;
+    /* background-color: blue; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-page-right-container {
+    grid-area: 1 / 6 / 6 / 10;
+    /* background-color: aqua; */
+    display: flex;
+    align-items: center;
+}
+
+.login-form-heading {
+    text-align: center;
+}
+
+.login-form-inputs {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.input {
+    margin-top: 5px;
+    width: 563px;
+    height: 30px;
+    background-color: var(--primary-500);
+    border: 2px solid var(--primary-800);
+    border-radius: 10px;
+}
+
+.label_password {
+    margin-top: 15px;
+}
+
+.login-btn {
+    margin-top: 50px;
+    width: 563px;
+    height: 44px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--red-500);
+    color: var(--primary-500);
+    font-size: 20px;
+}
+
+.other-logins {
+    margin-top: 35px;
+    text-align: center;
+}
+
+.google-login-icon {
+    margin-top: 35px;
+}
+
+.dont-have-acc {
+    margin-top: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dont-have-acc p {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.go-register {
+    margin-left: 3px;
+    font-weight: 500;
+    color: var(--red-500);
+    text-decoration: underline;
+}
