@@ -1,0 +1,62 @@
+.navbar-div{
+    background-color:var(--primary-50);
+    height: 87px;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-div-div1{
+    
+}
+.navbar-div-div1-logo{
+    font-size: 30px;
+    font-weight: 700;
+    margin-left: 100px;
+}
+.navbar-div-div2{
+    
+    width: 449px;
+    display: flex;
+    justify-content: space-between;
+}
+.navbar-div-div2-a-home{
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+    color: black;
+}
+.navbar-div-div2-a-Catergories{
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+    color: black;
+}
+.navbar-div-div2-a-Privious_Orders{
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+    color: black;
+}
+
+
+
+
+.navbar-div-div3{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+.user-a{
+    width:46px;
+    height: 46px;
+    border: 1px solid black;
+    border-radius: 100px;
+    margin-right: 5px;
+    
+
+}

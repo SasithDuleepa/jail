@@ -1,5 +1,5 @@
 .home-hero-div{
-    background-color: yellowgreen;
+    /* background-color: yellowgreen; */
     height: 100vh;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -8,21 +8,52 @@
     grid-row-gap: 0px;
 
 }
-.home-body-div-1{
-    height: 100vh;
-    background-color: violet;
-}
 
 
     
     .home-hero-sub-div1 {
          grid-area: 1 / 1 / 2 / 2; 
-         background-color: aqua;
+         /* background-color: aqua; */
         }
     .home-hero-sub-div2 {
          grid-area: 1 / 2 / 2 / 3; 
-         background-color: blue;
+         /* background-color: blue; */
     }
+
+
+
+.home-hero-sub-div-1-div{
+    /* background-color: blueviolet; */
+    margin-left: 150px;
+    margin-top: 170px;
+
+}
+.home-hero-sub-div-1-p1{
+    font-size: 64px;
+    font-weight: 400;
+
+}
+.home-hero-sub-div-1-p2{
+    font-size: 96px;
+    font-weight: 600;
+    margin-top: -60px;
+    margin-bottom: 10px;
+    color: var(--red-600) ;
+    
+}
+.home-hero-sub-div-1-button{
+    background-color: var(--red-600);
+    width: 214px;
+    height: 56px;
+    border: 1px ;
+    border-radius: 10px;
+    padding: 10px 48px 10px 48px;
+    margin-top: 10px;
+    font-size:24px ;
+    font-weight: 400;
+    color: var(--primary-50);
+}
+
 
 
 .home-hero-sub-img-div{
@@ -30,9 +61,49 @@
     align-items: center;
     justify-content: center;
     justify-items: center;
+    margin-top: 100px;
     
 }
 .home-hero-img{
     width:560px;
     height:538px ;
+}
+
+
+
+
+
+
+
+
+
+.home-food_products-header{
+    font-size: 25px;
+    font-weight: 400;
+    margin-left: 110px;
+    margin-top: 80px;
+}
+.home-Hygiene_products-header{
+    font-size: 25px;
+    font-weight: 400;
+    margin-left: 100px;
+}
+.home-body-div-1{
+    height: 150vh;
+    
+}
+.home-body-div-1-catergory{
+    text-align: center;
+    font-size: 50px;
+    font-weight: 500;
+}
+
+.home-body-div-1-catergory-card-div-main{
+    display: flex;
+    justify-content: center;
+}
+.home-body-div-1-catergory-card-div{
+    display: flex;
+    width: 85%;
+    justify-content: space-between;
 }
