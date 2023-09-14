@@ -6,7 +6,9 @@ import {Switch} from "react-router-dom";
 import Navbar from './components/navBar/navbar';
 
 import Home from './page/home/home';
-import User_Registration from './page/home/User_registration/User_registration';
+
+import Login from './page/Login/login';
+
 import Item_preview from './page/item preview/item_preview';
 import Add_item from './page/add item/add_item';
 import { useEffect, useState } from 'react';
@@ -30,7 +32,9 @@ function App() {
       <Router>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/user_registration" component={User_Registration} />
+
+          <Route exact path="/login" component={Login} />
+
           <Route exact path="/item_preview/:id" component={Item_preview} />
           <Route exact path="/add_item" component={Add_item} />
 
