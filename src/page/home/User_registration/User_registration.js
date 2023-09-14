@@ -6,12 +6,15 @@ import register from '../../../assets/register.png'
 export default function User_Registration(props) {
 
     const initialValues = {
-      username: "",
+      firstname: "",
+      lastname: "",
+      mobilenumber: "",
       password: "",
+      confirmpassword: "",
     };
     const [formValues, setFormValues] = useState(initialValues);
     const [formErrors, setFormErrors] = useState({});
-    const [isLogin, setIsLogin] = useState(false);
+    const [isRegister, setIsRegister] = useState(false);
   
     const handleChange = (e) => {
       const { name, value } = e.target;
@@ -21,25 +24,34 @@ export default function User_Registration(props) {
     const handleSubmit = (e) => {
       e.preventDefault();
       setFormErrors(validate(formValues));
-      setIsLogin(true);
+      setIsRegister(true);
   
     }
   
     useEffect(() => {
       console.log(formErrors);
-      if (Object.keys(formErrors).length === 0 && isLogin) {
+      if (Object.keys(formErrors).length === 0 && isRegister) {
         console.log(formValues);
       }
-    }, [formErrors, formValues, isLogin]
+    }, [formErrors, formValues, isRegister]
     )
   
     const validate = (values) => {
       const errors = {}
-      if (!values.username) {
-        errors.username = "User Name is Required!"
+      if (!values.firstname) {
+        errors.firstname = "First Name is Required!"
+      }
+      if (!values.lastname) {
+        errors.lastname = "Last Name is Required!"
+      }
+      if (!values.mobilenumber) {
+        errors.mobilenumber = "Enter your mobile number"
       }
       if (!values.password) {
         errors.password = "Password is Required!"
+      }
+      if (!values.confirmpassword) {
+        errors.confirmpassword = "Required! confirm password"
       }
       return errors;
     }
@@ -51,32 +63,47 @@ export default function User_Registration(props) {
   
     return (
       <>
-        <div class="login_page">
+        <div class="register_page">
   
           <div class="top_container">
-            <h1 className='login_header'> {props.heading} </h1>
+            <h1 className='register_header'> {props.heading} </h1>
           </div>
   
           <div class="bottom_left">
-            <div className='login_img'>
-              <img src={register} alt='image' />
+            <div className='register_img'>
+              <img src={register} alt='image'/>
             </div>
           </div>
   
           <div class="bottom_right">
-            <div className='login_form'>
+            <div className='register_form'>
               <form >
                 <h1 className='form_heading'>Registration</h1>
                 <div className='form_inputs'>
-                  <span className='label_username'>User Name:</span>
-                  <input className='input' name='username' type='text' value={formValues.username} onChange={handleChange} />
-                  <p className='error_indicator'>{formErrors.username}</p>
+                <div className="column">
+                    <div className="row">
+                        <label className="label_username">First Name:</label>
+                        <input className="input" name="username" type="text" value={formValues.username} onChange={handleChange} />
+                        <p className="error_indicator">{formErrors.firstname}</p>
+                    </div>
+                    <div className="row">
+                        <label className="label_username">Last Name:</label>
+                        <input className="input" name="username" type="text" value={formValues.lastname} onChange={handleChange} />
+                        <p className="error_indicator">{formErrors.lasttname}</p>
+                    </div>
+                </div>
+                  <span className='label_password'>Mobile Number:</span>
+                  <input className='input' name='mobilenumber' type='number' value={formValues.mobilenumber} onChange={handleChange} />
+                  <p className='error_indicator'>{formErrors.mobilenumber}</p>
                   <span className='label_password'>Password:</span>
                   <input className='input' name='password' type='password' value={formValues.password} onChange={handleChange} />
                   <p className='error_indicator'>{formErrors.password}</p>
+                  <span className='label_password'>Confirm Password:</span>
+                  <input className='input' name='password' type='password' value={formValues.confirmpassword} onChange={handleChange} />
+                  <p className='error_indicator'>{formErrors.confirmpassword}</p>
                 </div>
-                <div className='login_btn' onClick={handleSubmit} >
-                  <span className='login_btn_name'>Register</span>
+                <div className='register_btn' onClick={handleSubmit} >
+                  <span className='register_btn_name'>Register</span>
                 </div>
               </form>
             </div>
