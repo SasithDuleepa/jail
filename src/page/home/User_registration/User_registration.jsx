@@ -63,49 +63,52 @@ export default function User_Registration(props) {
   
     return (
       <>
-        <div class="register_page">
+        <div className="register_page">
   
-          <div class="top_container">
+          {/* <div className="top_container">
             <h1 className='register_header'> {props.heading} </h1>
           </div>
-  
-          <div class="bottom_left">
+   */}
+          <div className="bottom_left">
             <div className='register_img'>
-              <img src={register} alt='image'/>
+              <img src={register} className='registration-img' alt='image'/>
             </div>
           </div>
   
-          <div class="bottom_right">
+          <div className="bottom_right">
             <div className='register_form'>
-              <form >
+
                 <h1 className='form_heading'>Registration</h1>
-                <div className='form_inputs'>
-                <div className="column">
-                    <div className="row">
-                        <label className="label_username">First Name:</label>
-                        <input className="input" name="username" type="text" value={formValues.username} onChange={handleChange} />
-                        <p className="error_indicator">{formErrors.firstname}</p>
-                    </div>
-                    <div className="row">
-                        <label className="label_username">Last Name:</label>
-                        <input className="input" name="username" type="text" value={formValues.lastname} onChange={handleChange} />
-                        <p className="error_indicator">{formErrors.lasttname}</p>
-                    </div>
+                <div className='registration-form'>
+                  <label className="label_username">First Name:</label>
+                  <input className="register_form_input" name="username" type="text" value={formValues.username} onChange={handleChange} />
+                  {/* <p className="error_indicator">{formErrors.firstname}</p> */}
                 </div>
-                  <span className='label_password'>Mobile Number:</span>
-                  <input className='input' name='mobilenumber' type='number' value={formValues.mobilenumber} onChange={handleChange} />
-                  <p className='error_indicator'>{formErrors.mobilenumber}</p>
-                  <span className='label_password'>Password:</span>
-                  <input className='input' name='password' type='password' value={formValues.password} onChange={handleChange} />
-                  <p className='error_indicator'>{formErrors.password}</p>
-                  <span className='label_password'>Confirm Password:</span>
-                  <input className='input' name='password' type='password' value={formValues.confirmpassword} onChange={handleChange} />
-                  <p className='error_indicator'>{formErrors.confirmpassword}</p>
+                <div className='registration-form'>
+                  <label className="label_username">Last Name:</label>
+                  <input className="register_form_input" name="username" type="text" value={formValues.lastname} onChange={handleChange} />
+                  {/* <p className="error_indicator">{formErrors.lasttname}</p> */}
                 </div>
-                <div className='register_btn' onClick={handleSubmit} >
-                  <span className='register_btn_name'>Register</span>
+                <div className='registration-form'>
+                  <label className='label_password'>Mobile Number:</label>
+                  <input className='register_form_input' name='mobilenumber' type='number' value={formValues.mobilenumber} onChange={handleChange} />
+                  {/* <p className='error_indicator'>{formErrors.mobilenumber}</p> */}
                 </div>
-              </form>
+                <div className='registration-form'>
+                  <label className='label_password'>Password:</label>
+                  <input className='register_form_input' name='password' type='password' value={formValues.password} onChange={handleChange} />
+                  {/* <p className='error_indicator'>{formErrors.password}</p> */}
+                </div>
+                <div className='registration-form'>
+                  <label className='label_password'>Confirm Password:</label>
+                  <input className='register_form_input' name='password' type='password' value={formValues.confirmpassword} onChange={handleChange} />
+                  {/* <p className='error_indicator'>{formErrors.confirmpassword}</p> */}
+                </div>
+
+                <div className='register_btn' >
+                  <button className='register_btn_' onClick={handleSubmit} >Register</button>
+                </div>
+ 
             </div>
           </div>
   
