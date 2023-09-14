@@ -11,6 +11,7 @@ import Login from './page/Login/login';
 
 import Item_preview from './page/item preview/item_preview';
 import Add_item from './page/add item/add_item';
+import User_Registration from './page/home/User_registration/User_registration';
 import { useEffect, useState } from 'react';
 
 
@@ -37,6 +38,7 @@ function App() {
 
           <Route exact path="/item_preview/:id" component={Item_preview} />
           <Route exact path="/add_item" component={Add_item} />
+          <Route exact path="/user_registration" component={User_Registration} />
 
         </Switch>
       </Router>

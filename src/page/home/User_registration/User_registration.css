@@ -4,7 +4,8 @@
     grid-template-rows: repeat(9, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
-    height: 100vh;
+    height: 90vh;
+    
 }
 
 .top_container {
@@ -23,7 +24,7 @@
     grid-area: 3 / 1 / 10 / 6;
     display: flex;
     justify-content: center;
-    margin-top: 5%;
+    margin-top: 0%;
 }
 
 .bottom_right {
@@ -33,7 +34,7 @@
 
 .login_form {
 
-    margin-top: 20%;
+    margin-top: 0%;
 }
 
 .form_heading {

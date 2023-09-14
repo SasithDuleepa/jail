@@ -48,7 +48,7 @@ export default function Login() {
                             <img src={google} className='google-login-icon'/>
                             <div className='dont-have-acc'>
                                 <p>Don't have an Account?</p>
-                                <a className='go-register' >Register</a>
+                                <a className='go-register' href='/user_registration' >Register</a>
                             </div>
                         </div>
                     </div>
