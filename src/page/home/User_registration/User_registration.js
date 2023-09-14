@@ -8,6 +8,7 @@ export default function User_Registration(props) {
     const initialValues = {
       firstname: "",
       lastname: "",
+      mobilenumber: "",
       password: "",
       confirmpassword: "",
     };
@@ -43,11 +44,14 @@ export default function User_Registration(props) {
       if (!values.lastname) {
         errors.lastname = "Last Name is Required!"
       }
+      if (!values.mobilenumber) {
+        errors.mobilenumber = "Enter your mobile number"
+      }
       if (!values.password) {
         errors.password = "Password is Required!"
       }
       if (!values.confirmpassword) {
-        errors.confirmpassword = "Required confirm password"
+        errors.confirmpassword = "Required! confirm password"
       }
       return errors;
     }
@@ -76,9 +80,21 @@ export default function User_Registration(props) {
               <form >
                 <h1 className='form_heading'>Registration</h1>
                 <div className='form_inputs'>
-                  <span className='label_username'>First Name:</span>
-                  <input className='input' name='username' type='text' value={formValues.username} onChange={handleChange} />
-                  <p className='error_indicator'>{formErrors.firstname}</p>
+                <div className="column">
+                    <div className="row">
+                        <label className="label_username">First Name:</label>
+                        <input className="input" name="username" type="text" value={formValues.username} onChange={handleChange} />
+                        <p className="error_indicator">{formErrors.firstname}</p>
+                    </div>
+                    <div className="row">
+                        <label className="label_username">Last Name:</label>
+                        <input className="input" name="username" type="text" value={formValues.lastname} onChange={handleChange} />
+                        <p className="error_indicator">{formErrors.lasttname}</p>
+                    </div>
+                </div>
+                  <span className='label_password'>Mobile Number:</span>
+                  <input className='input' name='mobilenumber' type='number' value={formValues.mobilenumber} onChange={handleChange} />
+                  <p className='error_indicator'>{formErrors.mobilenumber}</p>
                   <span className='label_password'>Password:</span>
                   <input className='input' name='password' type='password' value={formValues.password} onChange={handleChange} />
                   <p className='error_indicator'>{formErrors.password}</p>
