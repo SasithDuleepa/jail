@@ -1,4 +1,4 @@
-.login_page {
+.register_page {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(9, 1fr);
@@ -15,7 +15,7 @@
     justify-content: center;
 }
 
-.login_header {
+.register_header {
     font-size: 65px;
     font-weight: bold;
 }
@@ -32,7 +32,7 @@
     display: flex;
 }
 
-.login_form {
+.register_form {
 
     margin-top: 0%;
 }
@@ -55,25 +55,25 @@
 }
 
 .input {
-    margin-top: 5px;
+    margin-top: 2px;
     border-radius: 10px;
     border: 3px solid var( --black-300);
     background-color: var( --primary-50);
     width: 447px;
     height: 40px;
     font-size: 15px;
-    padding-left: 10px;
+    padding-left: 5px;
 }
 
 .input:focus {
-    outline-color: var(--inputfield-border-focus-color);
+    outline-color: var(--black-900);
 }
 
 .label_password {
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
-.login_btn {
+.register_btn {
     width: 447px;
     height: 45px;
     margin-top: 60px;
@@ -85,7 +85,7 @@
     cursor: pointer;
 }
 
-.login_btn_name {
+.register_btn_name {
     font-size: 24px;
     font-weight: 600;
     background-color: transparent;
@@ -94,7 +94,7 @@
 }
 
 .error_indicator {
-    color: var(--error-color);
+    color: var( --red-500);
     font-weight: 500px;
     font-size: 13px;
 }
