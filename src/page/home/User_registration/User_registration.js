@@ -59,7 +59,7 @@ export default function User_Registration(props) {
   
           <div class="bottom_left">
             <div className='login_img'>
-              <img src={register} alt='image' />
+              <img src={register} alt='image'/>
             </div>
           </div>
   
