@@ -28,10 +28,10 @@ export default function Login() {
                         </form>
                         <div className='other-logins'>
                             <p className='other-logins-divider'>or</p>
-                            <img src={google} className='google-login-icon' onClick={''}/>
+                            <img src={google} className='google-login-icon' onClick={'#'}/>
                             <div className='dont-have-acc'>
                                 <p>Don't have an Account?</p>
-                                <span className='go-register' onClick={''}>Register</span>
+                                <span className='go-register' onClick={'#'}>Register</span>
                             </div>
                         </div>
                     </div>

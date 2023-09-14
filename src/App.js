@@ -7,6 +7,7 @@ import Navbar from './components/navBar/navbar';
 
 import Home from './page/home/home';
 import Login from './page/Login/login';
+import Item_preview from './page/item preview/item_preview';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/login" component={Login} />
+          <Route exact path="/item_preview/:id" component={Item_preview} />
 
         </Switch>
       </Router>
