@@ -1,37 +1,54 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './login.css'
 
 import login_image from '../../assets/login_image.png'
 import google from '../../assets/google.png'
 
 export default function Login() {
+    const[loginData, setLoginData] = useState({
+        mobile_no:'',
+        password:''
+    })
+    const HandleChange = (e) =>{
+        const newdata = {...loginData}
+        newdata[e.target.id] = e.target.value
+        setLoginData(newdata)
+    }
+    const LoginHanler = () =>{
+        window.location.href = '/home'
+        // console.log('login clicked');
+    }
     return (
         <div>
-            <div class="login-page">
-                <div class="login-page-left-container">
+            <div className="login-page">
+                <div className="login-page-left-container">
                     <div className='login-image-div'>
                         <img src={login_image} className='login_img' />
                     </div>
                 </div>
 
-                <div class="login-page-right-container">
+                <div className="login-page-right-container">
                     <div className='login-form-div'>
-                        <form>
+                       
                             <h1 className='login-form-heading'>Log-In</h1>
                             <div className='login-form-inputs'>
-                                <span className='label_mobile'>Mobile Number:</span>
-                                <input className='input' type='number' name='mobile_number' />
-                                <span className='label_password'>Password:</span>
-                                <input className='input' type='password' name='password' />
+                                <label className='label_mobile'>Mobile Number:</label>
+                                <input className='login-input' type='text' id='mobile_no' onChange={(e)=>HandleChange(e)} value={loginData.mobile_no} />
+                                <label className='label_password'>Password:</label>
+                                <input className='login-input' type='password' id='password' onChange={(e)=>HandleChange(e)} value={loginData.password} /> 
                             </div>
-                            <button className='login-btn'>Log-In</button>
-                        </form>
+                       
+                             <button className='login-btn' onClick={LoginHanler} >Log-In</button>
+                  
+                          
+                            
+             
                         <div className='other-logins'>
                             <p className='other-logins-divider'>or</p>
-                            <img src={google} className='google-login-icon' onClick={'#'}/>
+                            <img src={google} className='google-login-icon'/>
                             <div className='dont-have-acc'>
                                 <p>Don't have an Account?</p>
-                                <span className='go-register' onClick={'#'}>Register</span>
+                                <a className='go-register' >Register</a>
                             </div>
                         </div>
                     </div>

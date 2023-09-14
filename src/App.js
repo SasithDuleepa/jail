@@ -19,7 +19,7 @@ function App() {
   const currentPath = window.location.pathname;
     console.log(currentPath);
     useEffect(()=>{
-      if(currentPath == "/user_registration" ||currentPath == "/login"){
+      if(currentPath == "/user_registration" ||currentPath == "/"){
         setRegister(false)
     }
     },[]
@@ -31,9 +31,9 @@ function App() {
       {/* <Navbar /> */}
       <Router>
         <Switch>
-          <Route exact path="/" component={Home} />
+          <Route exact path="/home" component={Home} />
 
-          <Route exact path="/login" component={Login} />
+          <Route exact path="/" component={Login} />
 
           <Route exact path="/item_preview/:id" component={Item_preview} />
           <Route exact path="/add_item" component={Add_item} />
