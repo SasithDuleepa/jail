@@ -19,7 +19,7 @@ function App() {
   const currentPath = window.location.pathname;
     console.log(currentPath);
     useEffect(()=>{
-      if(currentPath == "/user_registration"){
+      if(currentPath == "/user_registration" ||currentPath == "/login"){
         setRegister(false)
     }
     },[]
