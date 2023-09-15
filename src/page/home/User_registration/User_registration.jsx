@@ -5,70 +5,32 @@ import register from '../../../assets/register.png'
 
 export default function User_Registration(props) {
 
-    const initialValues = {
+  const [userData , setUserData] = useState({
       firstname: "",
       lastname: "",
       mobilenumber: "",
+      email: "",
       password: "",
-      confirmpassword: "",
-    };
-    const [formValues, setFormValues] = useState(initialValues);
-    const [formErrors, setFormErrors] = useState({});
-    const [isRegister, setIsRegister] = useState(false);
+    })
+
+
   
     const handleChange = (e) => {
-      const { name, value } = e.target;
-      setFormValues({ ...formValues, [name]: value });
+      const newdata = {...userData}
+      newdata[e.target.name] = e.target.value
+      setUserData(newdata)
     };
   
-    const handleSubmit = (e) => {
-      e.preventDefault();
-      setFormErrors(validate(formValues));
-      setIsRegister(true);
-  
+    const handleSubmit = () => {
+      console.log(userData)
     }
   
-    useEffect(() => {
-      console.log(formErrors);
-      if (Object.keys(formErrors).length === 0 && isRegister) {
-        console.log(formValues);
-      }
-    }, [formErrors, formValues, isRegister]
-    )
-  
-    const validate = (values) => {
-      const errors = {}
-      if (!values.firstname) {
-        errors.firstname = "First Name is Required!"
-      }
-      if (!values.lastname) {
-        errors.lastname = "Last Name is Required!"
-      }
-      if (!values.mobilenumber) {
-        errors.mobilenumber = "Enter your mobile number"
-      }
-      if (!values.password) {
-        errors.password = "Password is Required!"
-      }
-      if (!values.confirmpassword) {
-        errors.confirmpassword = "Required! confirm password"
-      }
-      return errors;
-    }
-  
-    // const login_handler = () => {
-    //   window.location = '/User_registration'
-    // }
-  
-  
+
     return (
       <>
         <div className="register_page">
   
-          {/* <div className="top_container">
-            <h1 className='register_header'> {props.heading} </h1>
-          </div>
-   */}
+
           <div className="bottom_left">
             <div className='register_img'>
               <img src={register} className='registration-img' alt='image'/>
@@ -81,29 +43,30 @@ export default function User_Registration(props) {
                 <h1 className='form_heading'>Registration</h1>
                 <div className='registration-form'>
                   <label className="label_username">First Name:</label>
-                  <input className="register_form_input" name="username" type="text" value={formValues.username} onChange={handleChange} />
-                  {/* <p className="error_indicator">{formErrors.firstname}</p> */}
+                  <input className="register_form_input" name="firstname" type="text" value={userData.firstname} onChange={(e)=>handleChange(e)} />
+                 
                 </div>
                 <div className='registration-form'>
                   <label className="label_username">Last Name:</label>
-                  <input className="register_form_input" name="username" type="text" value={formValues.lastname} onChange={handleChange} />
-                  {/* <p className="error_indicator">{formErrors.lasttname}</p> */}
+                  <input className="register_form_input" name="lastname" type="text" value={userData.lastname} onChange={(e)=>handleChange(e)} />
+                 
                 </div>
                 <div className='registration-form'>
                   <label className='label_password'>Mobile Number:</label>
-                  <input className='register_form_input' name='mobilenumber' type='number' value={formValues.mobilenumber} onChange={handleChange} />
-                  {/* <p className='error_indicator'>{formErrors.mobilenumber}</p> */}
+                  <input className='register_form_input' name='mobilenumber' type='text' value={userData.mobilenumber}  onChange={(e)=>handleChange(e)} />
+                  
+                </div>
+                <div className='registration-form'>
+                  <label className='label_mail'>E-mail:</label>
+                  <input className='register_form_input' name='email' type='text' value={userData.email} onChange={(e)=>handleChange(e)}/>
+                  
                 </div>
                 <div className='registration-form'>
                   <label className='label_password'>Password:</label>
-                  <input className='register_form_input' name='password' type='password' value={formValues.password} onChange={handleChange} />
-                  {/* <p className='error_indicator'>{formErrors.password}</p> */}
+                  <input className='register_form_input' name='password' type='password' value={userData.password} onChange={(e)=>handleChange(e)} />
+                 
                 </div>
-                <div className='registration-form'>
-                  <label className='label_password'>Confirm Password:</label>
-                  <input className='register_form_input' name='password' type='password' value={formValues.confirmpassword} onChange={handleChange} />
-                  {/* <p className='error_indicator'>{formErrors.confirmpassword}</p> */}
-                </div>
+                
 
                 <div className='register_btn' >
                   <button className='register_btn_' onClick={handleSubmit} >Register</button>
