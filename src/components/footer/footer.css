@@ -1,0 +1,20 @@
+.footer {
+    background-color: #ffffff;
+    padding: 32px;
+    text-align: center;
+    box-shadow: #33333323;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .link-icon {
+    margin: 0 8px;
+    color: #333;
+  }
+  
+  .link-icon:hover {
+    color: #007bff; 
+  }
