@@ -1,9 +1,9 @@
 import React, {useState, useEffect} from 'react'
 import './User_registration.css'
-
+import axios from 'axios'
 import register from '../../../assets/register.png'
 
-export default function User_Registration(props) {
+export default function User_Registration() {
 
   const [userData , setUserData] = useState({
       firstname: "",
@@ -21,10 +21,28 @@ export default function User_Registration(props) {
       setUserData(newdata)
     };
   
-    const handleSubmit = () => {
+    const handleSubmit = async() => {
       console.log(userData)
+      const response = await axios.post('http://localhost:8080/users/register', userData)
+      console.log(response)
+      if(response.status === 200){
+        alert("Registration Successful")
+        setUserData({
+          firstname: "",
+          lastname: "",
+          mobilenumber: "",
+          email: "",
+          password: "",
+        })
+        window.location.href = "/"
+      }else if(response.status === 400){
+        alert("Registration Failed")
+      }else if(response.status === 500){
+        alert("Internal Server Error")
+      }
+
+    
     }
-  
 
     return (
       <>
@@ -53,12 +71,12 @@ export default function User_Registration(props) {
                 </div>
                 <div className='registration-form'>
                   <label className='label_password'>Mobile Number:</label>
-                  <input className='register_form_input' name='mobilenumber' type='text' value={userData.mobilenumber}  onChange={(e)=>handleChange(e)} />
+                  <input className='register_form_input' name='mobilenumber' type='number' value={userData.mobilenumber}  onChange={(e)=>handleChange(e)} />
                   
                 </div>
                 <div className='registration-form'>
                   <label className='label_mail'>E-mail:</label>
-                  <input className='register_form_input' name='email' type='text' value={userData.email} onChange={(e)=>handleChange(e)}/>
+                  <input className='register_form_input' name='email' type='email' value={userData.email} onChange={(e)=>handleChange(e)}/>
                   
                 </div>
                 <div className='registration-form'>

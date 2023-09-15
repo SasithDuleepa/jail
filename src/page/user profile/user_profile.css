@@ -1,0 +1,30 @@
+.user-profile-parent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    height: 86vh;
+    padding-top: 100px;
+    }
+    
+    .user-profile-div1 { 
+        grid-area: 1 / 1 / 2 / 2;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+     }
+    .user-profile-div2 { 
+        grid-area: 1 / 2 / 2 / 3;
+        padding-left: 100px;
+        padding-top: 50px;
+     }
+
+     .user-profile-detail-div{
+        display: flex
+          
+     }
+     .use-profile-key-p{
+        font-size: 28px;
+     }

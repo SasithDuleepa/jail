@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import './login.css'
+import './login.css';
+import axios from 'axios';
 
 import login_image from '../../assets/login_image.png'
 import google from '../../assets/google.png'
@@ -14,8 +15,23 @@ export default function Login() {
         newdata[e.target.id] = e.target.value
         setLoginData(newdata)
     }
-    const LoginHanler = () =>{
-        window.location.href = '/home'
+    const LoginHanler =async () =>{
+        const res = await axios.post('http://localhost:8080/login', loginData)
+        // console.log(res.status);
+        if(res.status === 200){
+            alert('Login Successfull')
+            let {token, user_role,user_name, user_id} = res.data;
+            sessionStorage.setItem('login', true);
+            sessionStorage.setItem('token', token);
+
+
+            window.location.href = `/home/${user_id}`
+        }else if (res.data.error === true){
+            alert('Invalid Credentials')
+        }
+
+        
+                // window.location.href = '/home'
         // console.log('login clicked');
     }
     return (
