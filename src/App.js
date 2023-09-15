@@ -14,7 +14,7 @@ import Add_item from './page/add item/add_item';
 import User_Registration from './page/home/User_registration/User_registration';
 import User_profile from './page/user profile/user_profile';
 import { useEffect, useState } from 'react';
-
+import Footer from './components/footer/footer';
 
 function App() {
   const[register,setRegister] = useState(true)
@@ -44,7 +44,7 @@ function App() {
 
         </Switch>
       </Router>
-     
+     <Footer/>
     </div>
   );
 }
