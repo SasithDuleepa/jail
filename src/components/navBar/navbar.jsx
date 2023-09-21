@@ -7,19 +7,21 @@ import { useState } from 'react';
 export default function Navbar() {
   const[ user_name, setUser_name] = useState('');
   const[ user_id, setUser_id] = useState('');
+  const[user_role, setUser_role] = useState('');
 
   const GetUser = async() => {
     const token_Value = sessionStorage.getItem('token');
     if(token_Value){
       const res =await axios.post('http://localhost:8080/user',{token:token_Value})
       let response_data = res.data;
-      // console.log(response_data.decoded)
+      console.log(response_data.decoded)
       if(response_data.error===true){
 
       }else if(response_data.error===false){
  
         setUser_id(response_data.decoded.user_id);
         setUser_name(response_data.decoded.user_name);
+        setUser_role(response_data.decoded.user_role);
         
       }
     
