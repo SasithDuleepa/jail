@@ -1,9 +1,25 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './add_item.css';
-
+import Item_preview from '../../../components/admin_item_preview/item_preview';
 import Axios from 'axios';
 
 export default function Add_item() {
+
+    //get all items
+    const [Items, setItems] = useState([])
+
+    const GetItems = async() =>{
+        const res = await Axios.get(`http://localhost:8080/items/getall`)
+        console.log(res.data)
+        setItems(res.data)
+    }
+    useEffect(()=>{
+        GetItems()
+    
+    },[])
+
+
+
     const [ItemData, setItemData] = useState({
         item: '',
         price: '',
@@ -44,7 +60,17 @@ export default function Add_item() {
     }
 
   return (
-    <div>
+    <div className='add_item-parent-div'>
+  
+        <div  className='add_item-child-div1'>
+            <div  className='item_privew-list'>
+                {Items.map((item, index) =>(
+                    <Item_preview key={index} item_name={item.item_name} item_price={item.price} item_catergory={item.catergory} item_description={item.description} img={item.img_name}/>
+                ))}
+            </div>
+
+        </div>
+        <div className='add_item-child-div2'>
         <div className='add-item-input-div'>
             <div>
                 <label>Item Name</label>
@@ -73,6 +99,8 @@ export default function Add_item() {
 
 
         </div>
+        </div>
     </div>
+    
   )
 }

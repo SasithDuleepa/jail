@@ -1,5 +1,32 @@
 
+.add_item-parent-div{
+    display: grid;
+grid-template-columns: repeat(6, 1fr);
+grid-template-rows: 1fr;
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+height: max-content;
+padding-top: 100px;
+}
+.add_item-child-div1{
+    grid-area: 1 / 1 / 2 / 5; 
 
+
+}
+.add_item-child-div2{
+    grid-area: 1 / 5 / 2 / 7;
+    
+}
 .add-item-input-div{
     padding-top: 100px;
+    position: fixed;
+}
+
+
+.item_privew-list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* height: 90vh; */
+    /* overflow-y: scroll; */
 }
