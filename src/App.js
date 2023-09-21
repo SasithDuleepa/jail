@@ -17,7 +17,7 @@ import { useEffect, useState } from 'react';
 import Footer from './components/footer/footer';
 
 import Admin_login from './page/Admin/login/admin_login';
-import Add_item from './page/Admin/catergory/add item/add_item';
+import Add_item from './page/Admin/add item/add_item';
 import Dashboad from './page/Admin/dashboad/dashboad';
 function App() {
   const[register,setRegister] = useState(true)
